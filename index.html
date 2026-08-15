@@ -1,0 +1,2433 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>OLIGRA BUSINESS | Sourcing • E-commerce • Chine</title>
+
+<style>
+:root{
+  --brown:#5b351f;
+  --brown2:#7a4a2b;
+  --light:#faf8f5;
+  --dark:#17120f;
+  --white:#fff;
+  --gray:#6d6864;
+  --border:#e8e1db;
+  --shadow:0 15px 45px rgba(40,22,10,.10);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--dark);
+  background:white;
+  line-height:1.6;
+}
+a{text-decoration:none;color:inherit}
+img{max-width:100%}
+.container{width:min(1180px,92%);margin:auto}
+
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
+
+.navbar{
+  height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.logo{
+  height:57px;
+  width:auto;
+  object-fit:contain;
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  gap:27px;
+}
+
+.nav a{
+  font-size:14px;
+  font-weight:600;
+  transition:.3s;
+}
+
+.nav a:hover{color:var(--brown2)}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 24px;
+  border-radius:5px;
+  font-weight:bold;
+  border:1px solid transparent;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.btn-brown{
+  background:var(--brown);
+  color:white;
+}
+
+.btn-brown:hover{
+  background:var(--brown2);
+  transform:translateY(-2px);
+}
+
+.btn-outline{
+  border-color:white;
+  color:white;
+}
+
+.btn-outline:hover{
+  background:white;
+  color:var(--brown);
+}
+
+.menu{
+  display:none;
+  border:0;
+  background:none;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+  min-height:760px;
+  padding-top:82px;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(90deg,rgba(24,14,8,.88),rgba(91,53,31,.55)),
+    url("images/hero.jpg") center/cover;
+}
+
+.hero-content{
+  color:white;
+  max-width:750px;
+}
+
+.small-title{
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:13px;
+  font-weight:bold;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-size:clamp(45px,7vw,82px);
+  line-height:1.03;
+  margin-bottom:25px;
+}
+
+.hero h1 span{color:#e5c8aa}
+
+.hero p{
+  font-size:19px;
+  max-width:650px;
+  color:#eee;
+  margin-bottom:35px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+/* SECTIONS */
+
+section{padding:100px 0}
+
+.light{background:var(--light)}
+
+.section-title{
+  max-width:750px;
+  margin-bottom:55px;
+}
+
+.label{
+  color:var(--brown2);
+  font-size:13px;
+  font-weight:bold;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+
+.section-title h2{
+  font-size:clamp(32px,5vw,53px);
+  line-height:1.1;
+  margin-bottom:18px;
+}
+
+.section-title p{color:var(--gray)}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+}
+
+.card{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 5px 20px rgba(0,0,0,.03);
+  transition:.35s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:var(--shadow);
+}
+
+.card-body{padding:27px}
+
+.icon{
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#f0e6de;
+  color:var(--brown);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
+  margin-bottom:20px;
+}
+
+.card h3{
+  font-size:21px;
+  margin-bottom:12px;
+}
+
+.card p{
+  color:var(--gray);
+  font-size:15px;
+  margin-bottom:18px;
+}
+
+.card a{
+  color:var(--brown);
+  font-weight:bold;
+  font-size:14px;
+}
+
+/* ABOUT */
+
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.about-image{
+  min-height:500px;
+  border-radius:10px;
+  background:
+    linear-gradient(135deg,rgba(91,53,31,.8),rgba(20,12,7,.8)),
+    url("images/about.jpg") center/cover;
+  position:relative;
+}
+
+.about-box{
+  position:absolute;
+  bottom:25px;
+  left:25px;
+  background:white;
+  padding:25px;
+  width:220px;
+  box-shadow:var(--shadow);
+}
+
+.about h2{
+  font-size:45px;
+  line-height:1.1;
+  margin-bottom:22px;
+}
+
+.about p{color:var(--gray);margin-bottom:20px}
+
+.values{
+  display:grid;
+  gap:16px;
+}
+
+.value{
+  border-left:3px solid var(--brown);
+  padding-left:18px;
+}
+
+.value strong{display:block;margin-bottom:4px}
+
+/* PROCESS */
+
+.process{
+  background:var(--dark);
+  color:white;
+}
+
+.process .section-title p{color:#bbb}
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:8px;
+}
+
+.step{
+  text-align:center;
+  padding:25px 10px;
+  border:1px solid rgba(255,255,255,.15);
+}
+
+.step-number{
+  color:#d8b99c;
+  font-size:26px;
+  font-weight:bold;
+  display:block;
+  margin-bottom:10px;
+}
+
+/* PLATFORMS */
+
+.platforms{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.platform{
+  min-height:250px;
+  padding:35px;
+  border-radius:10px;
+  background:white;
+  border:1px solid var(--border);
+}
+
+.platform strong{
+  font-size:28px;
+  color:var(--brown);
+}
+
+.platform h3{font-size:27px;margin:20px 0 10px}
+
+/* TRAININGS */
+
+.training-image{
+  height:200px;
+  background:#eee;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--brown);
+  font-size:60px;
+}
+
+.badge{
+  display:inline-block;
+  background:#f0e6de;
+  color:var(--brown);
+  padding:5px 10px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:bold;
+  margin-bottom:10px;
+}
+
+/* NEWS */
+
+.news{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.news-image{
+  height:210px;
+  background:
+    linear-gradient(135deg,var(--brown),#17120f);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:50px;
+}
+
+.news-body{padding:25px}
+
+/* TESTIMONIALS */
+
+.testimonial{
+  padding:30px;
+  background:white;
+  border:1px solid var(--border);
+  border-radius:8px;
+}
+
+.stars{color:#c58b45;font-size:18px;margin-bottom:15px}
+
+/* FAQ */
+
+.faq{
+  max-width:850px;
+  margin:auto;
+}
+
+details{
+  border-bottom:1px solid var(--border);
+  padding:20px 0;
+}
+
+summary{
+  cursor:pointer;
+  font-weight:bold;
+  font-size:17px;
+}
+
+/* CONTACT */
+
+.contact{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:60px;
+}
+
+.contact-info{
+  margin-top:30px;
+}
+
+.contact-info div{
+  margin-bottom:20px;
+}
+
+.contact-info strong{
+  color:var(--brown);
+}
+
+form{
+  display:grid;
+  gap:15px;
+}
+
+input,textarea,select{
+  width:100%;
+  padding:15px;
+  border:1px solid var(--border);
+  border-radius:5px;
+  outline:none;
+  font:inherit;
+}
+
+input:focus,textarea:focus,select:focus{
+  border-color:var(--brown);
+}
+
+textarea{min-height:150px;resize:vertical}
+
+/* FOOTER */
+
+footer{
+  background:#17120f;
+  color:white;
+  padding:70px 0 25px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:45px;
+  margin-bottom:50px;
+}
+
+.footer-logo{height:55px;background:white;padding:5px;margin-bottom:20px}
+
+footer p,footer a{color:#aaa;font-size:14px}
+
+footer h4{margin-bottom:18px}
+
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);
+  padding-top:22px;
+  color:#888;
+  font-size:13px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+  position:fixed;
+  right:25px;
+  bottom:25px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:#25D366;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  z-index:900;
+  box-shadow:0 8px 30px rgba(0,0,0,.2);
+}
+
+/* ADMIN */
+
+#adminPage{
+  display:none;
+  min-height:100vh;
+  background:#f5f2ef;
+}
+
+.admin-login{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
+
+.login-box{
+  width:400px;
+  background:white;
+  padding:40px;
+  border-radius:10px;
+  box-shadow:var(--shadow);
+}
+
+.login-box img{
+  width:180px;
+  display:block;
+  margin:0 auto 30px;
+}
+
+.login-box h2{text-align:center;margin-bottom:25px}
+
+.admin-layout{
+  display:grid;
+  grid-template-columns:250px 1fr;
+  min-height:100vh;
+}
+
+.admin-sidebar{
+  background:#17120f;
+  color:white;
+  padding:25px 15px;
+}
+
+.admin-sidebar img{
+  width:160px;
+  background:white;
+  padding:5px;
+  margin:10px auto 35px;
+  display:block;
+}
+
+.admin-sidebar button{
+  width:100%;
+  text-align:left;
+  background:none;
+  border:0;
+  color:#ddd;
+  padding:13px 15px;
+  cursor:pointer;
+  border-radius:5px;
+  margin-bottom:5px;
+}
+
+.admin-sidebar button:hover,
+.admin-sidebar button.active{
+  background:var(--brown);
+  color:white;
+}
+
+.admin-content{padding:35px}
+
+.admin-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:30px;
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:15px;
+  margin-bottom:30px;
+}
+
+.stat{
+  background:white;
+  padding:22px;
+  border-radius:8px;
+  box-shadow:0 4px 15px rgba(0,0,0,.04);
+}
+
+.stat span{
+  color:var(--gray);
+  font-size:13px;
+}
+
+.stat strong{
+  display:block;
+  font-size:30px;
+  color:var(--brown);
+}
+
+.admin-section{
+  background:white;
+  padding:25px;
+  border-radius:8px;
+  margin-bottom:25px;
+}
+
+.admin-table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.admin-table th,
+.admin-table td{
+  padding:12px;
+  text-align:left;
+  border-bottom:1px solid var(--border);
+  font-size:14px;
+}
+
+.admin-table th{background:#faf8f5}
+
+.action{
+  border:0;
+  padding:7px 10px;
+  border-radius:4px;
+  cursor:pointer;
+  margin-right:5px;
+}
+
+.edit{background:#eee0d4}
+.delete{background:#f5d4d4;color:#8a2222}
+.publish{background:#dff1e4;color:#216c35}
+
+.hidden{display:none!important}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(4,1fr)}
+  .footer-grid{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(3,1fr)}
+}
+
+@media(max-width:800px){
+  .menu{display:block}
+
+  .nav{
+    display:none;
+    position:absolute;
+    top:82px;
+    left:0;
+    width:100%;
+    background:white;
+    flex-direction:column;
+    align-items:flex-start;
+    padding:25px;
+    box-shadow:var(--shadow);
+  }
+
+  .nav.show{display:flex}
+  .nav-cta{display:none}
+
+  .hero{min-height:650px}
+
+  .about,
+  .contact{
+    grid-template-columns:1fr;
+  }
+
+  .platforms,
+  .news{
+    grid-template-columns:1fr;
+  }
+
+  .admin-layout{grid-template-columns:1fr}
+
+  .admin-sidebar{
+    position:relative;
+  }
+}
+
+@media(max-width:600px){
+  section{padding:70px 0}
+  .grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .hero h1{font-size:48px}
+  .about h2{font-size:35px}
+  .admin-content{padding:18px}
+  .admin-table{display:block;overflow-x:auto}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= SITE PUBLIC ================= -->
+
+<div id="publicSite">
+
+<header>
+<div class="container navbar">
+
+<a href="#accueil">
+<img src="images/logo.png" class="logo" alt="OLIGRA BUSINESS">
+</a>
+
+<button class="menu" onclick="toggleMenu()">☰</button>
+
+<nav class="nav" id="nav">
+<a href="#accueil">Accueil</a>
+<a href="#apropos">À propos</a>
+<a href="#services">Services</a>
+<a href="#formations">Formations</a>
+<a href="#chine">Acheter en Chine</a>
+<a href="#actualites">Actualités</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<a href="#contact" class="btn btn-brown nav-cta">Nous contacter</a>
+
+</div>
+</header>
+
+<section class="hero" id="accueil">
+
+<div class="container hero-content">
+
+<div class="small-title">
+OLIGRA BUSINESS
+</div>
+
+<h1>
+Votre business.<br>
+<span>Notre expertise.</span>
+</h1>
+
+<p>
+Sourcing, e-commerce, achats en Chine et formations :
+OLIGRA BUSINESS vous accompagne dans vos projets commerciaux.
+</p>
+
+<div class="hero-buttons">
+<a href="#services" class="btn btn-brown">Découvrir nos services</a>
+<a href="#formations" class="btn btn-outline">Nos formations</a>
+</div>
+
+</div>
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="label">OLIGRA BUSINESS</div>
+
+<h2>
+Construire des opportunités,
+connecter les marchés.
+</h2>
+
+<p>
+Créée en janvier 2026 à Kinshasa, OLIGRA BUSINESS
+accompagne les entrepreneurs et particuliers dans
+le sourcing, l'e-commerce et les achats en Chine.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="light" id="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="label">NOS SERVICES</div>
+
+<h2>Des solutions pour développer votre activité.</h2>
+
+<p>
+Nous mettons notre expertise à votre disposition pour
+vous accompagner dans vos projets.
+</p>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+<div class="card-body">
+<div class="icon">⌕</div>
+<h3>Sourcing</h3>
+<p>
+Recherche de produits et identification
+de fournisseurs adaptés à vos besoins.
+</p>
+<a href="#contact">En savoir plus →</a>
+</div>
+</div>
+
+<div class="card">
+<div class="card-body">
+<div class="icon">◈</div>
+<h3>E-commerce</h3>
+<p>
+Découvrez les méthodes et outils nécessaires
+pour développer une activité e-commerce.
+</p>
+<a href="#contact">En savoir plus →</a>
+</div>
+</div>
+
+<div class="card">
+<div class="card-body">
+<div class="icon">🇨🇳</div>
+<h3>Achats en Chine</h3>
+<p>
+Nous vous accompagnons dans votre processus
+d'achat auprès de fournisseurs chinois.
+</p>
+<a href="#chine">En savoir plus →</a>
+</div>
+</div>
+
+<div class="card">
+<div class="card-body">
+<div class="icon">★</div>
+<h3>Formations</h3>
+<p>
+Formations pratiques sur l'e-commerce
+et les achats en Chine.
+</p>
+<a href="#formations">Nos formations →</a>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="apropos">
+
+<div class="container about">
+
+<div class="about-image">
+
+<div class="about-box">
+<strong>Depuis 2026</strong>
+<br>
+Kinshasa, RDC
+</div>
+
+</div>
+
+<div>
+
+<div class="label">À PROPOS</div>
+
+<h2>
+Une entreprise tournée vers
+les nouvelles opportunités.
+</h2>
+
+<p>
+OLIGRA BUSINESS est une entreprise basée à Kinshasa,
+en République Démocratique du Congo.
+</p>
+
+<p>
+Elle a été créée en janvier 2026 par
+<strong>Joseph Mulenda Lwabeya</strong> et
+<strong>MBUYI MUSASA Dimercia</strong>.
+</p>
+
+<div class="values">
+
+<div class="value">
+<strong>Notre mission</strong>
+Nous accompagnons nos clients avec des solutions
+pratiques, accessibles et professionnelles.
+</div>
+
+<div class="value">
+<strong>Notre vision</strong>
+Créer des passerelles entre les entrepreneurs africains
+et les opportunités commerciales internationales.
+</div>
+
+<div class="value">
+<strong>Nos valeurs</strong>
+Intégrité, service, apprentissage, innovation et engagement.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="process" id="chine">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="label" style="color:#d8b99c">
+ACHETER EN CHINE
+</div>
+
+<h2>
+De votre besoin jusqu'à la livraison.
+</h2>
+
+<p>
+Un processus structuré pour mieux sécuriser vos achats.
+</p>
+
+</div>
+
+<div class="steps">
+
+<div class="step">
+<span class="step-number">01</span>
+Besoin
+</div>
+
+<div class="step">
+<span class="step-number">02</span>
+Recherche
+</div>
+
+<div class="step">
+<span class="step-number">03</span>
+Fournisseur
+</div>
+
+<div class="step">
+<span class="step-number">04</span>
+Commande
+</div>
+
+<div class="step">
+<span class="step-number">05</span>
+Paiement
+</div>
+
+<div class="step">
+<span class="step-number">06</span>
+Transport
+</div>
+
+<div class="step">
+<span class="step-number">07</span>
+Livraison
+</div>
+
+</div>
+
+<br><br>
+
+<div class="platforms">
+
+<div class="platform">
+<strong>1688</strong>
+<h3>1688</h3>
+<p>
+Plateforme chinoise permettant de rechercher
+des produits et fournisseurs.
+</p>
+</div>
+
+<div class="platform">
+<strong>ALI</strong>
+<h3>Alibaba</h3>
+<p>
+Une plateforme internationale permettant
+de trouver des fournisseurs et produits.
+</p>
+</div>
+
+<div class="platform">
+<strong>PDD</strong>
+<h3>Pinduoduo</h3>
+<p>
+Une plateforme chinoise connue pour ses offres
+et son approche commerciale.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="light" id="formations">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="label">NOS FORMATIONS</div>
+
+<h2>Apprendre. Pratiquer. Entreprendre.</h2>
+
+<p>
+Découvrez nos formations disponibles.
+</p>
+
+</div>
+
+<div class="grid" id="formationsContainer"></div>
+
+</div>
+
+</section>
+
+<section id="actualites">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="label">ACTUALITÉS</div>
+
+<h2>Les dernières nouvelles.</h2>
+
+</div>
+
+<div class="news" id="newsContainer"></div>
+
+</div>
+
+</section>
+
+<section class="light">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="label">TÉMOIGNAGES</div>
+
+<h2>Ils parlent de leur expérience.</h2>
+
+</div>
+
+<div class="grid" id="testimonialsContainer"></div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container faq">
+
+<div class="section-title">
+
+<div class="label">FAQ</div>
+
+<h2>Questions fréquentes.</h2>
+
+</div>
+
+<div id="faqContainer"></div>
+
+</div>
+
+</section>
+
+<section class="light" id="contact">
+
+<div class="container contact">
+
+<div>
+
+<div class="label">CONTACT</div>
+
+<h2>
+Parlons de votre projet.
+</h2>
+
+<p>
+Une question sur nos services, une formation
+ou un achat en Chine ?
+</p>
+
+<div class="contact-info">
+
+<div>
+<strong>E-mail</strong>
+<br>
+businessoligra@gmail.com
+</div>
+
+<div>
+<strong>Téléphones</strong>
+<br>
+0980454014
+<br>
+0999668662
+</div>
+
+<div>
+<strong>Localisation</strong>
+<br>
+Kinshasa, République Démocratique du Congo
+</div>
+
+</div>
+
+</div>
+
+<form id="contactForm">
+
+<input name="name" placeholder="Nom complet" required>
+
+<input name="email" type="email" placeholder="E-mail" required>
+
+<input name="phone" placeholder="Téléphone">
+
+<input name="subject" placeholder="Sujet">
+
+<textarea name="message" placeholder="Votre message" required></textarea>
+
+<button class="btn btn-brown">
+Envoyer le message
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<img src="images/logo.png" class="footer-logo" alt="OLIGRA BUSINESS">
+
+<p>
+OLIGRA BUSINESS accompagne les entrepreneurs
+dans le sourcing, l'e-commerce et les achats en Chine.
+</p>
+
+</div>
+
+<div>
+
+<h4>Navigation</h4>
+
+<a href="#accueil">Accueil</a><br>
+<a href="#apropos">À propos</a><br>
+<a href="#services">Services</a><br>
+<a href="#formations">Formations</a>
+
+</div>
+
+<div>
+
+<h4>Services</h4>
+
+<a href="#services">Sourcing</a><br>
+<a href="#services">E-commerce</a><br>
+<a href="#chine">Achats en Chine</a><br>
+<a href="#formations">Formations</a>
+
+</div>
+
+<div>
+
+<h4>Contact</h4>
+
+<p>businessoligra@gmail.com</p>
+<p>0980454014</p>
+<p>0999668662</p>
+<p>Kinshasa, RDC</p>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+© 2026 OLIGRA BUSINESS — Tous droits réservés.
+
+</div>
+
+</div>
+
+</footer>
+
+<a class="whatsapp"
+href="https://wa.me/243980454014"
+target="_blank">
+☏
+</a>
+
+</div>
+
+
+<!-- ================= ADMIN ================= -->
+
+<div id="adminPage">
+
+<div id="loginPage" class="admin-login">
+
+<div class="login-box">
+
+<img src="images/logo.png" alt="OLIGRA BUSINESS">
+
+<h2>Administration</h2>
+
+<form id="loginForm">
+
+<input
+type="email"
+id="adminEmail"
+placeholder="Adresse e-mail"
+required>
+
+<input
+type="password"
+id="adminPassword"
+placeholder="Mot de passe"
+required>
+
+<button class="btn btn-brown" style="width:100%">
+Se connecter
+</button>
+
+</form>
+
+<p id="loginError"
+style="color:#b22;margin-top:15px;text-align:center">
+</p>
+
+</div>
+
+</div>
+
+
+<div id="dashboardPage" class="admin-layout hidden">
+
+<aside class="admin-sidebar">
+
+<img src="images/logo.png" alt="OLIGRA BUSINESS">
+
+<button onclick="adminSection('dashboard')">📊 Tableau de bord</button>
+
+<button onclick="adminSection('formations')">🎓 Formations</button>
+
+<button onclick="adminSection('news')">📰 Actualités</button>
+
+<button onclick="adminSection('testimonials')">⭐ Témoignages</button>
+
+<button onclick="adminSection('faq')">❓ FAQ</button>
+
+<button onclick="adminSection('messages')">📩 Messages</button>
+
+<button onclick="adminSection('registrations')">📝 Inscriptions</button>
+
+<button onclick="logout()">🚪 Déconnexion</button>
+
+</aside>
+
+
+<main class="admin-content">
+
+<div class="admin-top">
+
+<div>
+<h1 id="adminTitle">Tableau de bord</h1>
+<p>Administration OLIGRA BUSINESS</p>
+</div>
+
+<a href="/" class="btn btn-brown">Voir le site</a>
+
+</div>
+
+
+<div id="adminDashboard">
+
+<div class="stats">
+
+<div class="stat">
+<span>Formations</span>
+<strong id="statFormations">0</strong>
+</div>
+
+<div class="stat">
+<span>Actualités</span>
+<strong id="statNews">0</strong>
+</div>
+
+<div class="stat">
+<span>Témoignages</span>
+<strong id="statTestimonials">0</strong>
+</div>
+
+<div class="stat">
+<span>Messages</span>
+<strong id="statMessages">0</strong>
+</div>
+
+<div class="stat">
+<span>Inscriptions</span>
+<strong id="statRegistrations">0</strong>
+</div>
+
+</div>
+
+<div class="admin-section">
+
+<h2>Bienvenue dans l'administration</h2>
+
+<p>
+Depuis ce tableau de bord, vous pouvez gérer
+les formations, actualités, témoignages,
+FAQ, messages et inscriptions.
+</p>
+
+</div>
+
+</div>
+
+
+<div id="adminManager" class="hidden">
+
+<div class="admin-section">
+
+<div style="display:flex;justify-content:space-between;gap:15px;align-items:center">
+
+<h2 id="managerTitle"></h2>
+
+<button class="btn btn-brown" onclick="openAddForm()">
++ Ajouter
+</button>
+
+</div>
+
+<br>
+
+<div id="managerContent"></div>
+
+</div>
+
+</div>
+
+</main>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* ================= PUBLIC DATA ================= */
+
+const defaultData={
+formations:[
+{
+id:1,
+title:"Formation Achat en Chine",
+description:"Apprenez à rechercher des produits, trouver des fournisseurs et passer vos commandes.",
+date:"À venir",
+time:"20:30",
+price:"5",
+currency:"USD",
+mode:"En ligne",
+places:"30",
+program:"Alibaba • 1688 • Pinduoduo • Fournisseurs • Paiement • Transport",
+status:"published"
+}
+],
+
+news:[
+{
+id:1,
+title:"Bienvenue chez OLIGRA BUSINESS",
+category:"Entreprise",
+content:"OLIGRA BUSINESS développe ses activités autour du sourcing, de l'e-commerce et des achats en Chine.",
+date:"2026",
+status:"published"
+}
+],
+
+testimonials:[
+{
+id:1,
+name:"Participant",
+text:"Une formation pratique et accessible.",
+rating:5,
+status:"published"
+}
+],
+
+faq:[
+{
+id:1,
+question:"OLIGRA accompagne-t-il les débutants ?",
+answer:"Oui. Nos formations et services sont conçus pour accompagner aussi bien les débutants que les entrepreneurs expérimentés.",
+status:"published"
+},
+{
+id:2,
+question:"Quelles plateformes utilisez-vous ?",
+answer:"Nous travaillons notamment avec Alibaba, 1688 et Pinduoduo.",
+status:"published"
+}
+],
+
+messages:[],
+registrations:[]
+};
+
+function getData(){
+
+let data=localStorage.getItem("oligraData");
+
+if(!data){
+
+localStorage.setItem(
+"oligraData",
+JSON.stringify(defaultData)
+);
+
+return defaultData;
+}
+
+return JSON.parse(data);
+
+}
+
+function saveData(data){
+
+localStorage.setItem(
+"oligraData",
+JSON.stringify(data)
+);
+
+}
+
+
+/* ================= PUBLIC RENDER ================= */
+
+function renderPublic(){
+
+const data=getData();
+
+
+const f=document.getElementById("formationsContainer");
+
+f.innerHTML="";
+
+data.formations
+.filter(x=>x.status==="published")
+.forEach(x=>{
+
+f.innerHTML+=`
+
+<div class="card">
+
+<div class="training-image">🎓</div>
+
+<div class="card-body">
+
+<span class="badge">${x.mode}</span>
+
+<h3>${escapeHtml(x.title)}</h3>
+
+<p>${escapeHtml(x.description)}</p>
+
+<p>
+<strong>Date :</strong> ${escapeHtml(x.date)}<br>
+<strong>Heure :</strong> ${escapeHtml(x.time)}<br>
+<strong>Prix :</strong> ${escapeHtml(x.price)} ${escapeHtml(x.currency)}<br>
+<strong>Places :</strong> ${escapeHtml(x.places)}
+</p>
+
+<button
+class="btn btn-brown"
+onclick="registerFormation(${x.id})">
+S'inscrire
+</button>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+
+const n=document.getElementById("newsContainer");
+
+n.innerHTML="";
+
+data.news
+.filter(x=>x.status==="published")
+.forEach(x=>{
+
+n.innerHTML+=`
+
+<article class="card">
+
+<div class="news-image">📰</div>
+
+<div class="news-body">
+
+<span class="badge">
+${escapeHtml(x.category)}
+</span>
+
+<h3>${escapeHtml(x.title)}</h3>
+
+<p>${escapeHtml(x.content)}</p>
+
+<small>${escapeHtml(x.date)}</small>
+
+</div>
+
+</article>
+
+`;
+
+});
+
+
+const t=document.getElementById("testimonialsContainer");
+
+t.innerHTML="";
+
+data.testimonials
+.filter(x=>x.status==="published")
+.forEach(x=>{
+
+t.innerHTML+=`
+
+<div class="testimonial">
+
+<div class="stars">
+${"★".repeat(Number(x.rating)||5)}
+</div>
+
+<p>
+"${escapeHtml(x.text)}"
+</p>
+
+<br>
+
+<strong>
+${escapeHtml(x.name)}
+</strong>
+
+</div>
+
+`;
+
+});
+
+
+const q=document.getElementById("faqContainer");
+
+q.innerHTML="";
+
+data.faq
+.filter(x=>x.status==="published")
+.forEach(x=>{
+
+q.innerHTML+=`
+
+<details>
+
+<summary>
+${escapeHtml(x.question)}
+</summary>
+
+<p style="margin-top:15px;color:#666">
+${escapeHtml(x.answer)}
+</p>
+
+</details>
+
+`;
+
+});
+
+}
+
+
+/* ================= CONTACT ================= */
+
+document.getElementById("contactForm").addEventListener(
+"submit",
+function(e){
+
+e.preventDefault();
+
+const data=getData();
+
+const form=new FormData(this);
+
+data.messages.unshift({
+
+id:Date.now(),
+
+name:form.get("name"),
+
+email:form.get("email"),
+
+phone:form.get("phone"),
+
+subject:form.get("subject"),
+
+message:form.get("message"),
+
+date:new Date().toLocaleString("fr-FR"),
+
+status:"unread"
+
+});
+
+saveData(data);
+
+alert("Votre message a bien été envoyé à OLIGRA BUSINESS.");
+
+this.reset();
+
+});
+
+
+
+/* ================= INSCRIPTION ================= */
+
+function registerFormation(id){
+
+const data=getData();
+
+const formation=data.formations.find(x=>x.id===id);
+
+if(!formation)return;
+
+const name=prompt("Nom complet :");
+
+if(!name)return;
+
+const phone=prompt("Téléphone :");
+
+if(!phone)return;
+
+const email=prompt("E-mail :");
+
+if(!email)return;
+
+data.registrations.unshift({
+
+id:Date.now(),
+
+name:name,
+
+phone:phone,
+
+email:email,
+
+formation:formation.title,
+
+date:new Date().toLocaleString("fr-FR")
+
+});
+
+saveData(data);
+
+alert("Votre inscription a été enregistrée.");
+
+}
+
+
+
+/* ================= ADMIN ================= */
+
+function openAdmin(){
+
+document.getElementById("publicSite").style.display="none";
+
+document.getElementById("adminPage").style.display="block";
+
+}
+
+function closeAdmin(){
+
+document.getElementById("adminPage").style.display="none";
+
+document.getElementById("publicSite").style.display="block";
+
+}
+
+function login(){
+
+const email=document.getElementById("adminEmail").value;
+
+const password=document.getElementById("adminPassword").value;
+
+
+/*
+ IDENTIFIANTS DE DÉMONSTRATION
+
+ Email:
+ admin@oligra.com
+
+ Mot de passe:
+ OLIGRA2026
+
+ Pour un vrai site en ligne, il faut remplacer
+ cette authentification localStorage par un backend.
+*/
+
+if(
+email==="admin@oligra.com" &&
+password==="OLIGRA2026"
+){
+
+localStorage.setItem("oligraAdmin","true");
+
+showDashboard();
+
+}else{
+
+document.getElementById("loginError").textContent=
+"Identifiants incorrects.";
+
+}
+
+}
+
+document.getElementById("loginForm").addEventListener(
+"submit",
+function(e){
+
+e.preventDefault();
+
+login();
+
+});
+
+
+function showDashboard(){
+
+document.getElementById("loginPage").classList.add("hidden");
+
+document.getElementById("dashboardPage").classList.remove("hidden");
+
+updateStats();
+
+}
+
+
+function logout(){
+
+localStorage.removeItem("oligraAdmin");
+
+location.reload();
+
+}
+
+
+function updateStats(){
+
+const d=getData();
+
+document.getElementById("statFormations").textContent=d.formations.length;
+
+document.getElementById("statNews").textContent=d.news.length;
+
+document.getElementById("statTestimonials").textContent=d.testimonials.length;
+
+document.getElementById("statMessages").textContent=d.messages.length;
+
+document.getElementById("statRegistrations").textContent=d.registrations.length;
+
+}
+
+
+/* ================= ADMIN SECTIONS ================= */
+
+let currentSection="dashboard";
+
+function adminSection(section){
+
+currentSection=section;
+
+document.getElementById("adminDashboard").classList.add("hidden");
+
+document.getElementById("adminManager").classList.add("hidden");
+
+if(section==="dashboard"){
+
+document.getElementById("adminTitle").textContent=
+"Tableau de bord";
+
+document.getElementById("adminDashboard").classList.remove("hidden");
+
+updateStats();
+
+return;
+
+}
+
+document.getElementById("adminTitle").textContent=
+getSectionTitle(section);
+
+document.getElementById("adminManager").classList.remove("hidden");
+
+renderManager(section);
+
+}
+
+
+function getSectionTitle(section){
+
+const titles={
+formations:"Gestion des formations",
+news:"Gestion des actualités",
+testimonials:"Gestion des témoignages",
+faq:"Gestion de la FAQ",
+messages:"Messages reçus",
+registrations:"Inscriptions"
+};
+
+return titles[section]||"Administration";
+
+}
+
+
+function renderManager(section){
+
+const d=getData();
+
+const container=document.getElementById("managerContent");
+
+if(section==="messages"){
+
+container.innerHTML=`
+
+<table class="admin-table">
+
+<tr>
+<th>Nom</th>
+<th>E-mail</th>
+<th>Sujet</th>
+<th>Message</th>
+<th>Action</th>
+</tr>
+
+${d.messages.map(x=>`
+
+<tr>
+
+<td>${escapeHtml(x.name)}</td>
+
+<td>${escapeHtml(x.email)}</td>
+
+<td>${escapeHtml(x.subject)}</td>
+
+<td>${escapeHtml(x.message)}</td>
+
+<td>
+
+<button
+class="action delete"
+onclick="deleteItem('messages',${x.id})">
+Supprimer
+</button>
+
+</td>
+
+</tr>
+
+`).join("")}
+
+</table>
+
+`;
+
+return;
+
+}
+
+
+if(section==="registrations"){
+
+container.innerHTML=`
+
+<table class="admin-table">
+
+<tr>
+<th>Nom</th>
+<th>Téléphone</th>
+<th>E-mail</th>
+<th>Formation</th>
+<th>Date</th>
+<th>Action</th>
+</tr>
+
+${d.registrations.map(x=>`
+
+<tr>
+
+<td>${escapeHtml(x.name)}</td>
+
+<td>${escapeHtml(x.phone)}</td>
+
+<td>${escapeHtml(x.email)}</td>
+
+<td>${escapeHtml(x.formation)}</td>
+
+<td>${escapeHtml(x.date)}</td>
+
+<td>
+
+<button
+class="action delete"
+onclick="deleteItem('registrations',${x.id})">
+Supprimer
+</button>
+
+</td>
+
+</tr>
+
+`).join("")}
+
+</table>
+
+`;
+
+return;
+
+}
+
+
+let items=d[section];
+
+container.innerHTML=`
+
+<table class="admin-table">
+
+<tr>
+
+<th>Informations</th>
+
+<th>Statut</th>
+
+<th>Actions</th>
+
+</tr>
+
+${items.map(x=>`
+
+<tr>
+
+<td>
+
+<strong>
+${escapeHtml(
+x.title ||
+x.name ||
+x.question
+)}
+</strong>
+
+<br>
+
+<small>
+${escapeHtml(
+x.description ||
+x.text ||
+x.answer ||
+""
+)}
+</small>
+
+</td>
+
+<td>
+${escapeHtml(x.status||"")}
+</td>
+
+<td>
+
+<button
+class="action edit"
+onclick="editItem('${section}',${x.id})">
+Modifier
+</button>
+
+<button
+class="action publish"
+onclick="togglePublish('${section}',${x.id})">
+Publier/Masquer
+</button>
+
+<button
+class="action delete"
+onclick="deleteItem('${section}',${x.id})">
+Supprimer
+</button>
+
+</td>
+
+</tr>
+
+`).join("")}
+
+</table>
+
+`;
+
+}
+
+
+function openAddForm(){
+
+const section=currentSection;
+
+if(
+section==="messages" ||
+section==="registrations"
+){
+
+return;
+
+}
+
+const title=getSectionTitle(section);
+
+let html="";
+
+if(section==="formations"){
+
+html=`
+
+<input id="f_title" placeholder="Titre">
+
+<textarea id="f_description" placeholder="Description"></textarea>
+
+<input id="f_date" placeholder="Date">
+
+<input id="f_time" placeholder="Heure">
+
+<input id="f_price" placeholder="Prix">
+
+<input id="f_currency" placeholder="Devise">
+
+<input id="f_places" placeholder="Nombre de places">
+
+<select id="f_mode">
+
+<option>En ligne</option>
+<option>Présentiel</option>
+
+</select>
+
+<textarea id="f_program" placeholder="Programme"></textarea>
+
+`;
+
+}
+
+if(section==="news"){
+
+html=`
+
+<input id="n_title" placeholder="Titre">
+
+<input id="n_category" placeholder="Catégorie">
+
+<textarea id="n_content" placeholder="Contenu"></textarea>
+
+<input id="n_date" placeholder="Date">
+
+`;
+
+}
+
+if(section==="testimonials"){
+
+html=`
+
+<input id="t_name" placeholder="Nom">
+
+<textarea id="t_text" placeholder="Témoignage"></textarea>
+
+<input id="t_rating" type="number" min="1" max="5" value="5">
+
+`;
+
+}
+
+if(section==="faq"){
+
+html=`
+
+<input id="q_question" placeholder="Question">
+
+<textarea id="q_answer" placeholder="Réponse"></textarea>
+
+`;
+
+}
+
+
+const modal=document.createElement("div");
+
+modal.id="modal";
+
+modal.style.cssText=`
+
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.6);
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:5000;
+padding:20px;
+
+`;
+
+modal.innerHTML=`
+
+<div style="
+background:white;
+padding:30px;
+border-radius:10px;
+width:min(600px,100%);
+max-height:90vh;
+overflow:auto;
+">
+
+<h2>${title}</h2>
+
+<br>
+
+<form id="adminAddForm">
+
+${html}
+
+<br>
+
+<div style="display:flex;gap:10px">
+
+<button class="btn btn-brown">
+Enregistrer
+</button>
+
+<button
+type="button"
+class="btn"
+onclick="document.getElementById('modal').remove()">
+Annuler
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+`;
+
+document.body.appendChild(modal);
+
+document.getElementById("adminAddForm").onsubmit=function(e){
+
+e.preventDefault();
+
+const d=getData();
+
+let item={
+id:Date.now(),
+status:"published"
+};
+
+if(section==="formations"){
+
+item={
+...item,
+title:document.getElementById("f_title").value,
+description:document.getElementById("f_description").value,
+date:document.getElementById("f_date").value,
+time:document.getElementById("f_time").value,
+price:document.getElementById("f_price").value,
+currency:document.getElementById("f_currency").value,
+places:document.getElementById("f_places").value,
+mode:document.getElementById("f_mode").value,
+program:document.getElementById("f_program").value
+};
+
+}
+
+if(section==="news"){
+
+item={
+...item,
+title:document.getElementById("n_title").value,
+category:document.getElementById("n_category").value,
+content:document.getElementById("n_content").value,
+date:document.getElementById("n_date").value
+};
+
+}
+
+if(section==="testimonials"){
+
+item={
+...item,
+name:document.getElementById("t_name").value,
+text:document.getElementById("t_text").value,
+rating:document.getElementById("t_rating").value
+};
+
+}
+
+if(section==="faq"){
+
+item={
+...item,
+question:document.getElementById("q_question").value,
+answer:document.getElementById("q_answer").value
+};
+
+}
+
+d[section].push(item);
+
+saveData(d);
+
+modal.remove();
+
+renderManager(section);
+
+renderPublic();
+
+updateStats();
+
+};
+
+}
+
+
+/* ================= EDIT ================= */
+
+function editItem(section,id){
+
+const d=getData();
+
+const item=d[section].find(x=>x.id===id);
+
+if(!item)return;
+
+let title=
+prompt(
+"Modifier le titre / nom / question :",
+item.title||item.name||item.question
+);
+
+if(title===null)return;
+
+if(item.title!==undefined)item.title=title;
+
+else if(item.name!==undefined)item.name=title;
+
+else if(item.question!==undefined)item.question=title;
+
+if(item.description!==undefined){
+
+const value=prompt(
+"Modifier la description :",
+item.description
+);
+
+if(value!==null)item.description=value;
+
+}
+
+if(item.text!==undefined){
+
+const value=prompt(
+"Modifier le témoignage :",
+item.text
+);
+
+if(value!==null)item.text=value;
+
+}
+
+if(item.answer!==undefined){
+
+const value=prompt(
+"Modifier la réponse :",
+item.answer
+);
+
+if(value!==null)item.answer=value;
+
+}
+
+saveData(d);
+
+renderManager(section);
+
+renderPublic();
+
+}
+
+
+/* ================= DELETE ================= */
+
+function deleteItem(section,id){
+
+if(!confirm("Voulez-vous vraiment supprimer cet élément ?"))return;
+
+const d=getData();
+
+d[section]=d[section].filter(x=>x.id!==id);
+
+saveData(d);
+
+renderManager(section);
+
+renderPublic();
+
+updateStats();
+
+}
+
+
+/* ================= PUBLISH ================= */
+
+function togglePublish(section,id){
+
+const d=getData();
+
+const item=d[section].find(x=>x.id===id);
+
+if(!item)return;
+
+item.status=
+item.status==="published"
+?"hidden"
+:"published";
+
+saveData(d);
+
+renderManager(section);
+
+renderPublic();
+
+}
+
+
+/* ================= UTILITIES ================= */
+
+function escapeHtml(value){
+
+return String(value??"")
+.replace(/&/g,"&amp;")
+.replace(/</g,"&lt;")
+.replace(/>/g,"&gt;")
+.replace(/"/g,"&quot;")
+.replace(/'/g,"&#039;");
+
+}
+
+
+function toggleMenu(){
+
+document.getElementById("nav").classList.toggle("show");
+
+}
+
+
+/* ================= ADMIN ROUTE ================= */
+
+if(
+location.pathname==="/admin" ||
+location.hash==="#admin"
+){
+
+openAdmin();
+
+if(localStorage.getItem("oligraAdmin")==="true"){
+
+showDashboard();
+
+}
+
+}
+
+
+/* ================= INIT ================= */
+
+renderPublic();
+
+</script>
+
+</body>
+</html>
